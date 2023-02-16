@@ -1,0 +1,91 @@
+.loading-box {
+  display: grid;
+  position: fixed;
+  z-index: 999;
+  width: 100vw;
+  height: 100vh;
+  background: #ffffff;
+
+  place-items: center;
+}
+
+.loading-box.loaded {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s;
+}
+
+svg.tea {
+  --secondary: #222222;
+}
+
+svg.tea #teabag {
+  transform: rotate(3deg);
+  animation: swing 2s infinite;
+
+  transform-origin: top center;
+}
+
+svg.tea #steamL {
+  animation: steamLarge 2s infinite;
+
+  stroke-dasharray: 13;
+  stroke-dashoffset: 13;
+}
+
+svg.tea #steamR {
+  animation: steamSmall 2s infinite;
+
+  stroke-dasharray: 9;
+  stroke-dashoffset: 9;
+}
+
+@keyframes swing {
+  50% {
+    transform: rotate(-3deg);
+  }
+}
+
+@keyframes steamLarge {
+  0% {
+    opacity: .6;
+
+    stroke-dashoffset: 13;
+  }
+
+  100% {
+    opacity: 0;
+
+    stroke-dashoffset: 39;
+  }
+}
+
+@keyframes steamSmall {
+  10% {
+    opacity: .6;
+
+    stroke-dashoffset: 9;
+  }
+
+  80% {
+    opacity: 0;
+
+    stroke-dashoffset: 27;
+  }
+
+  100% {
+    opacity: 0;
+
+    stroke-dashoffset: 27;
+  }
+}
+
+.loading-text {
+  position: absolute;
+  transform: translateY(60px);
+
+  p {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+}

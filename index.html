@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>かぷりす</title>
+    <meta content="かぷりす" name="description">
+    <link rel="icon" href="./favicon/apple-touch-icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="./favicon/apple-touch-icon.png">
+    <link rel="shortcut icon" href="./favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="./favicon/favicon.ico" type="image/vnd.microsoft.icon">
+    <link rel="apple-touch-icon" href="./favicon/favicon.ico" type="image/vnd.microsoft.icon">
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+    <!--------------------スライダー見た目-------------------------------------------------->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <!------------------------------------------------------------------------------------->
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" rel="stylesheet" type="text/css">
+    <link href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/9dbe5551f0.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+</head>
+
+<body>
+    <!-- ローディング -->
+    <div class="loading-box">
+        <svg class="tea" width="70" viewbox="0 0 37 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27.0819 17H3.02508C1.91076 17 1.01376 17.9059 1.0485 19.0197C1.15761 22.5177 1.49703 29.7374 2.5 34C4.07125 40.6778 7.18553 44.8868 8.44856 46.3845C8.79051 46.79 9.29799 47 9.82843 47H20.0218C20.639 47 21.2193 46.7159 21.5659 46.2052C22.6765 44.5687 25.2312 40.4282 27.5 34C28.9757 29.8188 29.084 22.4043 29.0441 18.9156C29.0319 17.8436 28.1539 17 27.0819 17Z" stroke="var(--secondary)" stroke-width="2"></path>
+            <path d="M29 23.5C29 23.5 34.5 20.5 35.5 25.4999C36.0986 28.4926 34.2033 31.5383 32 32.8713C29.4555 34.4108 28 34 28 34" stroke="var(--secondary)" stroke-width="2"></path>
+            <path id="teabag" fill="var(--secondary)" fill-rule="evenodd" clip-rule="evenodd" d="M16 25V17H14V25H12C10.3431 25 9 26.3431 9 28V34C9 35.6569 10.3431 37 12 37H18C19.6569 37 21 35.6569 21 34V28C21 26.3431 19.6569 25 18 25H16ZM11 28C11 27.4477 11.4477 27 12 27H18C18.5523 27 19 27.4477 19 28V34C19 34.5523 18.5523 35 18 35H12C11.4477 35 11 34.5523 11 34V28Z">
+            </path>
+            <path id="steamL" d="M17 1C17 1 17 4.5 14 6.5C11 8.5 11 12 11 12" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke="var(--secondary)"></path>
+            <path id="steamR" d="M21 6C21 6 21 8.22727 19 9.5C17 10.7727 17 13 17 13" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+        <div class="loading-text">
+            <p>loading...</p>
+        </div>
+    </div>
+
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="header-tops-box">
+            <div class="header-tops">
+                <a class="logo" href="index.html"><img alt="Sample Shop" src="./images/logo/logo1.png"></a>
+                <a class="order-button" href="cake-reserve.html">
+                    <p class="order-text">予約</p>
+                </a>
+                <div class="nav-button" id="nav-button">
+                    <button id="open-btn" class="toggle-btn">
+                        <span></span>
+                    </button>
+                </div>
+                <!-- pcナビゲーション -->
+                <nav class="pc-nav">
+                    <div class="#">
+                        <ul class="pc-list">
+                            <li class="nav-menu-li">
+                                <a href="#concept">CONCEPT</a>
+                            </li>
+                            <li class="nav-menu-li">
+                                <a href="#menu">MENU</a>
+                            </li>
+                            <li class="nav-menu-li">
+                                <a href="#insta">INSTAGRAM</a>
+                            </li>
+                            <li class="nav-menu-li">
+                                <a href="#shop">SHOP</a>
+                            </li>
+                            <li class="nav-menu-li">
+                                <a href="contact.html">CONTACT</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- SPナビゲーション -->
+        <nav id="global-menu" class="nav-menu">
+            <div class="sp-nav-box">
+                <ul class="nav-list">
+                    <li class="nav-menu-li tel-container">
+                        <p class="tel">
+                            <span class="tel-text">ご予約・お問い合わせ</span>
+                        </p>
+                        <a class=sp-nav-text href="tel:0533-74-7321" class="telhref">
+                            <span>tel.<span class="tel-number">0533-74-7321</span></span>
+                        </a>
+                    </li>
+                    <li class="nav-menu-li">
+                        <a class=sp-nav-text href="index.html#concept">CONCEPT</a>
+                    </li>
+                    <li class="nav-menu-li">
+                        <a class=sp-nav-text href="index.html#menu">MENU</a>
+                    </li>
+                    <li class="nav-menu-li">
+                        <a class=sp-nav-text href="index.html#insta">INSTAGRAM</a>
+                    </li>
+                    <li class="nav-menu-li">
+                        <a class=sp-nav-text href="index.html#shop">SHOP</a>
+                    </li>
+                    <li class="nav-menu-li">
+                        <a class=sp-nav-text href="contact.html">CONTACT</a>
+                    </li>
+                    <li class="nav-menu-li">
+                        <ul class="sp-links-container sp-sns-list-box">
+                            <li class="sp-nav-anim sp-icon-instagram"><a class="sp-sns-links" href="#"><i class="fab fa-instagram"></i></a>
+                            <li class="sp-nav-anim  sp-icon-twitter"><a class="sp-sns-links" href="#"><i class="fab fa-twitter"></i></i></a>
+                            <li class="sp-nav-anim  sp-icon-facebook"><a class="sp-sns-links" href="#"><i class="fab fa-facebook-f"></i></a>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="fixed-right">
+        <a class="fixed-order-button" href="cake-reserve.html">
+            <p class="fixed-order-text">予約</p>
+        </a>
+    </div>
+    <div class="fixed-left">
+        <ul class="fixed-left-sns-list-box">
+            <li class="left-nav-anim sp-nav-anim sp-icon-instagram"><a class="sp-sns-links" href="#"><i class="fab fa-instagram"></i></a>
+            <li class="left-nav-anim sp-nav-anim  sp-icon-twitter"><a class="sp-sns-links" href="#"><i class="fab fa-twitter"></i></i></a>
+            <li class="left-nav-anim  sp-nav-anim sp-icon-facebook"><a class="sp-sns-links" href="#"><i class="fab fa-facebook-f"></i></a>
+        </ul>
+    </div>
+    <!-- メイン -->
+    <main>
+
+        <!-- カバー -->
+        <section class="cover-section">
+            <div class="cover">
+                <div class="carousel">
+                    <div class="img01"></div>
+                    <div class="img02"></div>
+                    <div class="img03"></div>
+                </div>
+            </div>
+        </section>
+        <!-- セクションコンテナ -->
+        <div id=area-2 class=section-container>
+            <!-- コンセプト -->
+            <section class="concept-section">
+                <div class="concept-box">
+                    <div id=concept class="concept">
+                        <h3 class="concept-logo">Concept</h3>
+                        <div class=concept-img-1></div>
+                    </div>
+                    <div class="concept-container">
+                        <div class=concept-thema-box>
+                            <h3 class="concept-thema">
+                                一目惚れする、 </h3>
+                            <h3 class="concept-thema concept-thema-sub">お菓子作りを。
+                            </h3>
+                        </div>
+                    </div>
+                    <div class=concept-text-container>
+                        <div class=concept-img-2></div>
+                        <div class=concept-text-box>
+                            <p class="concept-text catch">
+                                ひっそりと佇む洋菓子店</p>
+                            <div class="concept-sub-text-box">
+                                <p class="concept-sub-text">
+                                    素材にこだわり、一つひとつ丁寧に心を込めて作ることで、お菓子ひとつひとつにこだわりを大切にしています。</p>
+                                <p>お菓子のおいしさが運んでくれる楽しいひとときを過ごしていただければ幸いです。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- メニュー -->
+            <section class="menu-section">
+                <div id=menu class="menu">
+                    <h3 class="menu-logo">Menu</h3>
+                </div>
+                <div class="menu-container slider js-infinite-slider">
+                    <div class="menu-area">
+                        <img src="./images/cake/cake1.jpg" alt="ケーキ">
+                    </div>
+                    <div class="menu-area">
+                        <img src="./images/cake/cake2.jpg" alt="ケーキ">
+                    </div>
+                    <div class="menu-area">
+                        <img src="./images/cake/cake3.jpg" alt="ケーキ">
+                    </div>
+                    <div class="menu-area">
+                        <img src="./images/cake/cake4.jpg" alt="ケーキ">
+                    </div>
+                    <div class="menu-area pc-menu-area">
+                        <img src="./images/cake/cake5.jpg" alt="ケーキ">
+                    </div>
+                    <div class="menu-area pc-menu-area">
+                        <img src="./images/cake/cake6.jpg" alt="ケーキ">
+                    </div>
+                </div>
+                <div class="menu-container pc-slideshow slider js-infinite-slider--rtl" dir="rtl">
+                    <div class="menu-area">
+                        <img src="./images/cake/cake7.jpg" alt="ケーキ">
+                    </div>
+                    <div class="menu-area">
+                        <img src="./images/cake/cake8.jpg" alt="ケーキ">
+                    </div>
+                    <div class="menu-area">
+                        <img src="./images/cake/cake9.jpg" alt="ケーキ">
+                    </div>
+                    <div class="menu-area">
+                        <img src="./images/cake/cake10.jpg" alt="ケーキ">
+                    </div>
+                    <div class="menu-area pc-menu-area">
+                        <img src="./images/cake/cake11.jpg" alt="ケーキ">
+                    </div>
+                    <div class="menu-area pc-menu-area">
+                        <img src="./images/cake/cake12.jpg" alt="ケーキ">
+                    </div>
+                </div>
+                <div class=menu-concept-text-container>
+                    <h2 class=menu-concept-main>洋菓子への想いとこだわり</h2>
+                    <div class=menu-concept-sub>
+                        <p>「食べるだけでなく、<br class=sp-br>一つのアートとして楽しんでほしい」</p>
+                        <p>そんな想いから、かぷりすの洋菓子は生まれました。</p>
+                        <p>かぷりすが大切にしているのは、<br class=sp-br>日本ならではの美しい四季を、</p>
+                        <p>味や素材、香り、食感、モチーフなど、<br class=sp-br>さまざまな要素で表現すること。</p>
+                        <p>そのため基本となる「素材」「製法」「作り手の想い」を大切にしています。</p>
+                    </div>
+                </div>
+                <div class=menu-button-container>
+                    <a class="menu-button" href="###">more menu</a>
+                </div>
+                <div class=sp-menu-button-container>
+                    <a class="sp-menu-button" href="###">menu</a>
+                </div>
+                <div class="menu-container sp-slideshow slider js-infinite-slider--rtl" dir="rtl">
+                    <div class="menu-area">
+                        <img src="./images/cake/cake7.jpg" alt="ケーキ">
+                    </div>
+                    <div class="menu-area">
+                        <img src="./images/cake/cake8.jpg" alt="ケーキ">
+                    </div>
+                    <div class="menu-area">
+                        <img src="./images/cake/cake9.jpg" alt="ケーキ">
+                    </div>
+                    <div class="menu-area">
+                        <img src="./images/cake/cake10.jpg" alt="ケーキ">
+                    </div>
+                    <div class="menu-area pc-menu-area">
+                        <img src="./images/cake/cake11.jpg" alt="ケーキ">
+                    </div>
+                    <div class="menu-area pc-menu-area">
+                        <img src="./images/cake/cake12.jpg" alt="ケーキ">
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- インスタ -->
+            <section class="insta-section">
+                <div class="insta-section-container">
+                    <div id=insta class="insta">
+                        <h3 class="insta-logo">Instagram</h3>
+                    </div>
+                    <div class="insta-container">
+                        <div class="insta-area">
+                            <a class="insta-images c-bnr bg" href="#"><img src="./images/insta/insta1.jpg" alt="ケーキ"></a>
+                        </div>
+                        <div class="insta-area">
+                            <a class="insta-images c-bnr bg" href="#"> <img src="./images/insta/insta2.jpg" alt="ケーキ"></a>
+                        </div>
+                        <div class="insta-area">
+                            <a class="insta-images c-bnr bg" href="#"><img src="./images/insta/insta3.jpg" alt="ケーキ"></a>
+                        </div>
+                        <div class="insta-area">
+                            <a class="insta-images c-bnr bg" href="#"><img src="./images/insta/insta4.jpg" alt="プリン"></a>
+                        </div>
+                        <div class="insta-area pc-insta-area">
+                            <a class="insta-images c-bnr bg" href="#"><img src="./images/insta/insta5.jpg" alt="ケーキ"></a>
+                        </div>
+                        <div class="insta-area pc-insta-area">
+                            <a class="insta-images c-bnr bg" href="#"><img src="./images/insta/insta6.jpg" alt="ケーキ"></a>
+                        </div>
+                    </div>
+            </section>
+            <!-- ショップ -->
+            <section class=shop-section>
+                <div class="shop-section-container">
+                    <div id=shop class="shop">
+                        <h3 class="shop-logo">Shop</h3>
+                    </div>
+                    <div class="shop-guide">
+                        <iframe class="google-shop-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3275.3412863221515!2d137.35627522093642!3d34.82251072690031!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6004cfcc6775f941%3A0x1c731658f654f480!2z44GL44G344KK44GZ!5e0!3m2!1sja!2sjp!4v1669977399879!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class=shop-box>
+                            <a class="shop-guide-logo" href="index.html"><img alt="Sample Shop" src="./images/logo/logo1.png"></a>
+                            <table class="shop-info">
+                                <tbody>
+                                    <tr>
+                                        <th class=shop-info-text-1>住所</th>
+                                        <td>愛知県豊川市蔵子6丁目1-3</td>
+                                    </tr>
+                                    <tr>
+                                        <th class=shop-info-text-2>電話番号</th>
+                                        <td>0533-74-7321</td>
+                                    </tr>
+                                    <tr>
+                                        <th class=shop-info-text-2>営業時間</th>
+                                        <td>平日 12:00~20:00<br>
+                                            土日祝 12:00~18:00</td>
+                                    </tr>
+                                    <tr>
+                                        <th class=shop-info-text-3>定休日</th>
+                                        <td>カレンダー参照</td>
+                                    </tr>
+                                    <tr>
+                                        <th class=shop-info-text-3>駐車場</th>
+                                        <td>下図参照</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="sp-shop-info-images">
+                        <h3 class="sp-info-title">Parking&Calender</h3>
+                    </div>
+                    <div class=shop-info-images>
+                        <!-- 駐車場案内 -->
+                        <div class="parking-section">
+                            <div class="parking">
+                                <h3 class="parking-logo">Parking</h3>
+                            </div>
+                            <div class=parking-body>
+                                <img src="./images/shop/shop2.jpg" alt="駐車場について">
+                            </div>
+                        </div>
+
+                        <!-- カレンダー -->
+                        <div class="calender-section">
+                            <div class="calender">
+                                <h3 class="calender-logo">Calender</h3>
+                            </div>
+                            <div class="calender-body">
+                                <img src="./images/calender/calender1.jpg" alt="カレンダー">
+                            </div>
+                        </div>
+                        <div class=shop-sample-images></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!--フッター-->
+    <footer class=footer>
+        <div class=sns-links-box>
+            <ul class=sns-list-box>
+                <li class="nav-anim icon-instagram"><a class="sns-links" href="#"><i class="fab fa-instagram"></i></a>
+                <li class="nav-anim  icon-twitter"><a class="sns-links" href="#"><i class="fab fa-twitter"></i></i></a>
+                <li class="nav-anim  icon-facebook"><a class="sns-links" href="#"><i class="fab fa-facebook-f"></i></a>
+            </ul>
+        </div>
+        <div class="copyright">
+            <small>©2022 かぷりす.</small>
+        </div>
+        <p class="js-scroll scroll-top scroll-view"><a href="#area-2">Scroll</a></p>
+        <p class="js-pagetop scroll-top"><a href="#">Page Top</a></p>
+    </footer>
+
+    <!-- JS -->
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="./js/slick.min.js"></script>
+    <script src="./js/hamburger.js"></script>
+    <script src="./js/carousel.js"></script>
+    <script src="./js/slideshow.js"></script>
+    <script src="./js/scroll.js"></script>
+    <script src="./js/top-scroll.js"></script>
+    <script src="./js/loading.js"></script>
+    <script src="./js/reload-top.js"></script>
+</body>
+
+</html>

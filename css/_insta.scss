@@ -1,0 +1,213 @@
+// インスタのスタイル
+
+.insta-section {
+  position: relative;
+  z-index: 0;
+  padding-top: 7rem;
+  overflow: hidden;
+
+  @media (min-width: 769px) {
+    padding-top: 20rem;
+  }
+}
+
+.insta-section-container {
+  @media (min-width: 769px) {
+    width: 100%;
+    max-width: 95%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 10rem;
+  }
+}
+
+/* 丸デザインのcss */
+.insta-section:before {
+  position: absolute;
+  top: 8rem;
+  left: -8%;
+  z-index: 1;
+  transform: rotate(2deg);
+  width: 16rem;
+  height: 14rem;
+  border-radius: 78% 22% 42% 58%/31% 19% 81% 69%;
+  background: $l-beige;
+  content: "";
+
+  @media (min-width: 769px) {
+    position: absolute;
+    top: 20rem;
+    left: -8%;
+    transform: rotate(340deg);
+    width: 42rem;
+    height: 39rem;
+    border-radius: 78% 22% 42% 58%/31% 19% 81% 69%;
+    background: $l-beige;
+    content: "";
+  }
+}
+
+/* 丸デザインのcss */
+.insta-section:after {
+  position: absolute;
+  bottom: 0;
+  left: -10%;
+  z-index: 1;
+  transform: rotate(150deg);
+  width: 23rem;
+  height: 26rem;
+  border-radius: 36% 64% 69% 31%/31% 29% 71% 69%;
+  background: $l-beige;
+  content: "";
+
+  @media (min-width: 769px) {
+    position: absolute;
+    right: 4%;
+    bottom: 1%;
+    left: auto;
+    z-index: 1;
+    transform: none;
+    width: 51rem;
+    height: 40rem;
+    border-radius: 36% 64% 69% 31%/31% 29% 71% 69%;
+    background: $l-beige;
+    content: "";
+  }
+}
+
+.insta {
+  display: flex;
+  width: 90%;
+  max-width: 350px;
+  margin: auto;
+
+  @media (min-width: 769px) {
+    justify-content: flex-start;
+    width: 80%;
+    max-width: none;
+    margin: auto;
+    padding: 0 0 5rem 0;
+  }
+}
+
+/* 丸デザインのcss */
+.insta:before {
+  position: absolute;
+  top: 24rem;
+  right: -20%;
+  transform: rotate(177deg);
+  width: 16rem;
+  height: 20rem;
+  border-radius: 36% 64% 63% 37%/31% 29% 71% 69%;
+  background: $l-beige;
+  content: "";
+
+  @media (min-width: 769px) {
+    position: absolute;
+    top: 2rem;
+    right: 5%;
+    transform: rotate(48deg);
+    width: 26rem;
+    height: 27rem;
+    border-radius: 36% 64% 63% 37%/31% 29% 71% 69%;
+    background: $l-beige;
+    content: "";
+  }
+}
+
+.insta-logo {
+  z-index: 10;
+  color: $beige;
+  font-size: 4rem;
+  font-family: "Playfair Display", serif;
+  letter-spacing: -.1em;
+  text-shadow: 1px 2px 2px rgb(0 0 0 / 40%);
+
+  -webkit-text-stroke: .5px #000000;
+
+  @media (min-width: 769px) {
+    font-size: 7rem;
+    text-shadow: 2px 3px 3px rgba(0, 0, 0, .4);
+
+    -webkit-text-stroke: 1px #000000;
+  }
+}
+
+.insta-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+  margin-top: 3rem;
+
+  @media (min-width: 769px) {
+    margin: auto;
+  }
+}
+
+.insta-area {
+  display: inline-block;
+  z-index: 10;
+  width: 48%;
+  margin: 3% 0;
+  overflow: hidden;
+
+  @media (min-width: 769px) {
+    width: 30%;
+  }
+}
+
+.insta-images {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.c-bnr.bg {
+  display: block;
+  transition-duration: .5s;
+}
+
+.c-bnr.bg:hover {
+  transform: scale(1.2);
+}
+
+.c-bnr.bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.c-bnr.bg::before, .c-bnr.bg::after {
+  display: block;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto;
+  margin: auto;
+  content: "";
+  transition: .3s cubic-bezier(.45, 0, .55, 1);
+}
+
+.c-bnr.bg::before {
+  width: 100%;
+  height: 100%;
+  background: rgb(0 0 0 / 50%);
+}
+
+.c-bnr.bg::after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  bottom: 0;
+  transform: scale(.7);
+  color: #ffffff;
+  text-align: center;
+  content: url(../images/insta/insta-logo.png);
+}
+
+.c-bnr.bg:hover::before, .c-bnr.bg:hover::after {
+  opacity: 1;
+}

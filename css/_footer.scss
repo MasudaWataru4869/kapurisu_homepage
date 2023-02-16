@@ -1,0 +1,345 @@
+/* ----フッター---- */
+
+
+footer {
+  position: relative;
+  top: 100vh;
+  padding-top: 3rem;
+  overflow: hidden;
+  background-color: $white;
+  font-size: 1.2rem;
+
+
+  @media (min-width: 769px) {
+    position: relative;
+    top: 100vh;
+    padding: 10rem 0 5rem;
+    background: $white;
+    font-size: 2rem;
+  }
+}
+
+/* 丸デザインのcss */
+.footer:before {
+  position: absolute;
+  top: 1rem;
+  right: -5%;
+  z-index: 1;
+  transform: rotate(170deg);
+  width: 13rem;
+  height: 13rem;
+  border-radius: 71% 29% 63% 37%/63% 59% 41% 37%;
+  background: $l-beige;
+  content: "";
+
+  @media (min-width: 769px) {
+    position: absolute;
+    top: 2rem;
+    right: -2%;
+    z-index: 1;
+    transform: rotate(170deg);
+    width: 59rem;
+    height: 49rem;
+    border-radius: 71% 29% 63% 37%/63% 59% 41% 37%;
+    background: $l-beige;
+    content: "";
+  }
+}
+
+/* 丸デザインのcss */
+.footer:after {
+  position: absolute;
+  top: 7rem;
+  left: -10%;
+  z-index: 1;
+  transform: rotate(40deg);
+  width: 17rem;
+  height: 14rem;
+  border-radius: 63% 20% 28% 53%/64% 50% 30% 29%;
+  background: $l-beige;
+  content: "";
+
+  @media (min-width: 769px) {
+    position: absolute;
+    top: 5rem;
+    left: -5%;
+    z-index: 1;
+    transform: rotate(14deg);
+    width: 39rem;
+    height: 25rem;
+    border-radius: 63% 20% 28% 53%/64% 50% 30% 29%;
+    background: $l-beige;
+    content: "";
+  }
+}
+
+.copyright {
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+.sns-links-box {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  width: 60%;
+  height: 4rem;
+  margin: auto;
+
+  @media (min-width: 769px) {
+    width: 20%;
+    margin: auto;
+    margin-bottom: 5rem;
+  }
+}
+
+.sns-list-box {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  z-index: 10;
+  width: 80%;
+  height: 4rem;
+  margin: auto;
+
+  @media (min-width: 769px) {
+    width: 100%;
+    height: 5rem;
+  }
+}
+
+.nav-anim {
+  width: 4rem;
+  border-radius: 50%;
+  outline: 1.5px solid #000000;
+  transition: .5s all;
+
+  @media (min-width: 769px) {
+    width: 5rem;
+    border-radius: 50%;
+    transition: .5s all;
+  }
+}
+
+
+.nav-anim:hovert {
+  outline-offset: 3px;
+
+  @media (min-width: 769px) {
+    outline-offset: 4px;
+  }
+}
+
+
+.nav-anim:hover i {
+  animation: shake .25s;
+}
+
+.icon-instagram:hover {
+  outline: 1.5px solid #d6249f;
+
+  outline-offset: 3px;
+
+  @media (min-width: 769px) {
+    background-image: radial-gradient(circle at 30% 187%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 98%);
+    outline: 2px solid #d6249f;
+
+    outline-offset: 4px;
+  }
+}
+
+.icon-twitter:hover {
+  outline: 1.5px solid #1da1f2;
+
+  outline-offset: 3px;
+
+  @media (min-width: 769px) {
+    background-color: #1da1f2;
+    outline: 2px solid #1da1f2;
+
+    outline-offset: 4px;
+  }
+}
+
+.icon-facebook:hover {
+  outline: 1.5px solid #3b5998;
+
+  outline-offset: 3px;
+
+  @media (min-width: 769px) {
+    background-color: #3b5998;
+    outline: 2px solid #3b5998;
+
+    outline-offset: 4px;
+  }
+}
+
+@keyframes shake {
+  10% {
+    transform: rotate(15deg);
+  }
+
+  20% {
+    transform: rotate(-15deg);
+  }
+
+  30% {
+    transform: rotate(15deg);
+  }
+
+  40% {
+    transform: rotate(-15deg);
+  }
+}
+
+.sns-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: $black;
+  font-size: 2.5rem;
+
+  @media (min-width: 769px) {
+    font-size: 3rem;
+  }
+}
+
+.sns-links:hover {
+  color: #ffffff;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+
+  @media (min-width: 769px) {
+    margin-bottom: 5rem;
+  }
+
+  small {
+    z-index: 10;
+    font-size: 80%;
+  }
+}
+
+
+
+/*========= ページトップボタンのためのCSS ===============*/
+
+/*スクロールリンクの形状*/
+.scroll-top {
+  display: none;
+
+  @media (min-width: 769px) {
+    display: block;
+    visibility: hidden;
+    /*はじめは非表示*/
+    opacity: 0;
+    /*表示位置*/
+    position: fixed;
+    right: 2.5%;
+    bottom: 10px;
+    z-index: 15;
+    margin-bottom: 2rem;
+    /*改行禁止*/
+    white-space: nowrap;
+    transition: opacity .5s, visibility .5s;
+    /*矢印の動き*/
+    animation: arrowmove 1s ease-in-out infinite;
+    /*それぞれに0.5秒の変化のアニメーション*/
+    /*縦書き*/
+
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+  }
+}
+
+@keyframes arrowmove {
+  0% {
+    bottom: 20px;
+  }
+
+  50% {
+    bottom: 25px;
+  }
+
+  100% {
+    bottom: 20px;
+  }
+}
+
+
+/*.scroll-viewクラスがついたら出現*/
+.scroll-top.scroll-view {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*リンク全体の aタグの形状*/
+.scroll-top a {
+  display: block;
+  color: #666666;
+  font-size: .9rem;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/*スクロールリンクの形状*/
+
+.js-scroll a::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 50px;
+  background: #666666;
+  content: "";
+}
+
+.js-scroll a::before {
+  position: absolute;
+  top: 30px;
+  right: -6px;
+  transform: skewX(-31deg);
+  width: 1px;
+  height: 20px;
+  background: #666666;
+  content: "";
+}
+
+/*Edge IE11 hack*/
+_:-ms-lang(x), .js-scroll a::before {
+  right: -11px;
+}
+
+/*ページトップリンクの形状*/
+
+.js-pagetop a::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 50px;
+  background: #666666;
+  content: "";
+}
+
+.js-pagetop a::before {
+  position: absolute;
+  top: 0;
+  right: -6px;
+  transform: skewX(31deg);
+  width: 1px;
+  height: 20px;
+  background: #666666;
+  content: "";
+}
+
+/*Edge IE11 hack*/
+_:-ms-lang(x), .js-pagetop a::before {
+  right: 0;
+}

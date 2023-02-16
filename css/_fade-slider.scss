@@ -1,0 +1,60 @@
+/* ----フェードスライダーのためのcss---- */
+
+.fade-slider-wrapper {
+  opacity: 20%;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.fade-slider {
+  position: relative;
+  z-index: 1;
+  /*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
+  height: 100vh;
+  /*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+}
+
+/*　背景画像設定　*/
+
+.fade-slider-item01 {
+  background: url(../images/fade-slide/fade-slide1.jpg);
+}
+
+.fade-slider-item02 {
+  background: url(../images/fade-slide/fade-slide2.jpg);
+}
+
+.fade-slider-item03 {
+  background: url(../images/fade-slide/fade-slide3.jpg);
+}
+
+.fade-slider-item04 {
+  background: url(../images/fade-slide/fade-slide4.jpg);
+}
+
+.fade-slider-item05 {
+  background: url(../images/fade-slide/fade-slide5.jpg);
+}
+
+.fade-slider-item06 {
+  background: url(../images/fade-slide/fade-slide6.jpg);
+}
+
+.fade-slider-item07 {
+  background: url(../images/fade-slide/fade-slide7.jpg);
+}
+
+.fade-slider-item {
+  width: 100%;
+  /*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+  height: 100vh;
+  /*背景画像をリピートしない*/
+  background-position: center;
+  /*背景画像の位置を中央に*/
+  background-size: cover;
+  /*各スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+  background-repeat: no-repeat;
+  /*背景画像が.fade-slider-item全体を覆い表示*/
+}

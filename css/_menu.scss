@@ -1,0 +1,341 @@
+/* ----メニュー---- */
+
+.menu-section {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 7rem;
+  overflow: hidden;
+
+  @media (min-width: 769px) {
+    width: 100%;
+    max-width: 100%;
+    padding-top: 10rem;
+  }
+}
+
+/* 丸デザインのcss */
+.menu-section:before {
+  position: absolute;
+  top: -5%;
+  right: 10%;
+  transform: rotate(134deg);
+  width: 11rem;
+  height: 13rem;
+  border-radius: 30% 70% 67% 33%/51% 28% 72% 49%;
+  background: $l-beige;
+  content: "";
+
+  @media (min-width: 769px) {
+    position: absolute;
+    top: 19rem;
+    right: -2%;
+    transform: rotate(170deg);
+    width: 37rem;
+    height: 36rem;
+    border-radius: 30% 70% 67% 33%/51% 28% 72% 49%;
+    background: $l-beige;
+    content: "";
+  }
+}
+
+/* 丸デザインのcss */
+.menu-section:after {
+  position: absolute;
+  right: -20%;
+  bottom: 10%;
+  z-index: 1;
+  width: 32rem;
+  height: 43rem;
+  border-radius: 35% 65% 37% 63%/40% 28% 72% 60%;
+  background: $l-beige;
+  content: "";
+
+  @media (min-width: 769px) {
+    position: absolute;
+    bottom: 15%;
+    left: 10%;
+    width: 45rem;
+    height: 40rem;
+    border-radius: 35% 65% 37% 63%/40% 28% 72% 60%;
+    background: $l-beige;
+    content: "";
+  }
+}
+
+.menu {
+  display: flex;
+  width: 90%;
+  max-width: 350px;
+  margin: auto;
+
+  @media (min-width: 769px) {
+    justify-content: flex-start;
+    width: 76%;
+    max-width: 100%;
+    margin: auto;
+  }
+}
+
+/* 丸デザインのcss */
+.menu:before {
+  position: absolute;
+  top: 11rem;
+  left: -11%;
+  transform: rotate(232deg);
+  width: 20rem;
+  height: 14rem;
+  border-radius: 68% 32% 31% 69%/40% 65% 35% 60%;
+  background: $l-beige;
+  content: "";
+
+  @media (min-width: 769px) {
+    position: absolute;
+    top: 6rem;
+    left: 20%;
+    transform: none;
+    width: 24rem;
+    height: 24rem;
+    border-radius: 68% 32% 31% 69%/40% 65% 35% 60%;
+    background: $l-beige;
+    content: "";
+  }
+}
+
+
+.menu-logo {
+  z-index: 10;
+  color: $beige;
+  font-size: 4rem;
+  font-family: "Playfair Display", serif;
+  letter-spacing: -.1em;
+  text-shadow: 1px 2px 2px rgb(0 0 0 / 40%);
+
+  -webkit-text-stroke: .5px #000000;
+
+  @media (min-width: 769px) {
+    margin-left: .5rem;
+    font-size: 7rem;
+    text-shadow: 2px 3px 3px rgba(0, 0, 0, .4);
+
+    -webkit-text-stroke: 1px #000000;
+  }
+}
+
+// インフォメーショングリッド　//
+
+.menu-area {
+  margin: 100px 0;
+}
+
+.pc-menu-area {
+  display: none;
+
+  @media (min-width: 769px) {
+    display: block;
+  }
+}
+
+.menu-container {
+  img {
+    width: 100%;
+    height: 20rem;
+
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.menu-comment {
+  display: flex;
+  justify-content: center;
+  color: $black;
+  font-size: 1rem;
+
+  @media (min-width: 769px) {
+    margin-top: 3rem;
+    font-size: 2rem;
+  }
+}
+
+/*------ スライドショー ------*/
+
+.pc-slideshow {
+  display: none;
+
+  @media (min-width: 769px) {
+    display: block;
+  }
+}
+
+.sp-slideshow {
+  display: block;
+
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
+
+.slider {
+  z-index: 10;
+  width: 100%;
+  margin: 2rem 0;
+
+  @media (min-width: 769px) {
+    width: 100%;
+    margin: 4rem 0;
+  }
+}
+
+/*-------- 高さ調整 ----------*/
+.slider .slick-slide {
+  margin: 0 1rem;
+
+  @media (min-width: 769px) {
+    margin: 0 2rem;
+  }
+}
+
+.menu-container img {
+  width: 20rem;
+  height: 15rem;
+
+  object-fit: cover;
+  object-position: center;
+
+  @media (min-width: 769px) {
+    width: 35rem;
+    height: 20rem;
+  }
+}
+
+.menu-concept-text-container {
+  position: relative;
+  z-index: 10;
+  width: 80%;
+  margin: 5rem auto 0;
+  text-align: center;
+
+  @media (min-width: 769px) {
+    width: 75%;
+    margin: 10rem auto 5rem;
+    text-align: center;
+  }
+}
+
+.menu-concept-main {
+  margin-top: auto;
+  font-size: 2.5rem;
+  line-height: 1.5;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, .4);
+
+  @media (min-width: 769px) {
+    font-size: 3.5rem;
+    letter-spacing: .2em;
+    text-shadow: 2px 3px 3px rgba(0, 0, 0, .4);
+  }
+}
+
+
+.menu-concept-sub {
+  width: 90%;
+  margin: auto;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  text-align: start;
+
+  @media (min-width: 769px) {
+    font-size: 1.7rem;
+    line-height: 2;
+    text-align: center;
+  }
+}
+
+.sp-br {
+  display: block;
+
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
+
+/*-------- メニューボタン ----------*/
+
+.menu-button-container {
+  display: none;
+
+  @media (min-width: 769px) {
+    display: block;
+    width: 80%;
+    margin: auto;
+  }
+}
+
+.menu-button {
+  display: block;
+  width: 10%;
+  max-width: 15rem;
+  margin: auto;
+  padding: 15px 40px;
+  border: 2px solid $black;
+  border-radius: 6rem;
+  color: #222222;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: .2s cubic-bezier(.45, 0, .55, 1);
+}
+
+.menu-button:hover {
+  border: 2px solid $beige;
+  background: $beige;
+  color: $white;
+}
+
+.sp-menu-button-container {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 5rem;
+
+  @media (min-width: 769px) {
+    display: none;
+  }
+}
+
+.sp-menu-button {
+  display: block;
+  position: relative;
+  z-index: 10;
+  width: 30%;
+  margin-left: auto;
+  padding: 5px 20px;
+  color: $black;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: .2s cubic-bezier(.45, 0, .55, 1);
+}
+
+/*矢印の形状*/
+
+.sp-menu-button:before {
+  position: absolute;
+  top: 21px;
+  right: 3px;
+  transform: skewX(30deg);
+  width: 2px;
+  height: 10px;
+  background-color: #000000;
+  content: "";
+}
+
+.sp-menu-button:after {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 35px;
+  height: 1.5px;
+  background-color: #000000;
+  content: "";
+}

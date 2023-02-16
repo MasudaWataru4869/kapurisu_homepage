@@ -1,0 +1,21 @@
+@charset 'UTF-8'; /* 文字コードの指定 */
+
+// Google Fontsの読み込み
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vidaloka&family=Yeseva+One&display=swap');
+
+// Scssファイルの読み込み
+@import "base";
+@import "header";
+@import "cover";
+@import "menu";
+@import "concept";
+@import "insta";
+@import "shop";
+@import "footer";
+@import "contact";
+@import "cake-reserve";
+@import "fade-slider";
+@import "loading";

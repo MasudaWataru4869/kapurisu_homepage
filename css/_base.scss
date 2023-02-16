@@ -1,0 +1,70 @@
+// ベーススタイル
+
+// 変数
+$white: #ffffff;
+$black: #222222;
+$gray: #efefef;
+$beige: #c7a082;
+$l-beige: #ebdfd9;
+
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: $black;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.75;
+  font-family: "Shippori Mincho B1", serif;
+}
+
+a {
+  list-style: none;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+// 下層ページ　インフォメーションページ
+// 2カラム設定
+
+.column-box {
+  padding-top: 5rem;
+
+  @media (min-width: 769px) {
+    display: flex;
+    justify-content: space-between;
+    width: 98%;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding-top: 12rem;
+  }
+}
+
+article {
+  @media (min-width: 769px) {
+    width: 53.44%;
+  }
+}
+
+aside {
+  @media (min-width: 769px) {
+    width: 19.3%;
+  }
+}
+
+.section-container {
+  position: relative;
+  top: 100vh;
+  background: #ffffff;
+}
